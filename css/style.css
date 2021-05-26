@@ -41,6 +41,7 @@ a {
 }
 
 .container .name {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,13 +58,23 @@ a {
 .container .name .name_letter {
   font-size: 60px;
   font-weight: 400;
-  color: white;
-  -webkit-animation-name: letters_animation;
-          animation-name: letters_animation;
-  -webkit-animation-duration: 3.2s;
-          animation-duration: 3.2s;
-  -webkit-animation-delay: 1.4s;
-          animation-delay: 1.4s;
+  color: #000;
+}
+
+.container .name::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #a2bae0;
+  -webkit-animation-name: closed_block_animation;
+          animation-name: closed_block_animation;
+  -webkit-animation-duration: 2.7s;
+          animation-duration: 2.7s;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   -webkit-animation-iteration-count: 1;
@@ -72,27 +83,21 @@ a {
           animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes letters_animation {
+@-webkit-keyframes closed_block_animation {
   0% {
-    color: white;
-  }
-  10% {
-    color: white;
+    left: 0;
   }
   100% {
-    color: #000;
+    left: 400px;
   }
 }
 
-@keyframes letters_animation {
+@keyframes closed_block_animation {
   0% {
-    color: white;
-  }
-  10% {
-    color: white;
+    left: 0;
   }
   100% {
-    color: #000;
+    left: 400px;
   }
 }
 

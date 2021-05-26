@@ -8,34 +8,40 @@
 
     //! start text
     .name {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 320px;
         height: 50px;
         .name_letter{
-            // opacity: 0;
             font-size: 60px;
             font-weight: 400;
-            color: white;
-
-            animation-name: letters_animation;
-            animation-duration: 3.2s;
-            animation-delay: 1.4s;
+            color: #000;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background-color: rgb(162, 186, 224);
+            animation-name: closed_block_animation;
+            animation-duration: 2.7s;
+            animation-delay: 1.3s;
             animation-timing-function: linear;
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
+
         }
-        @keyframes letters_animation {
+        
+        @keyframes closed_block_animation {
             0% {
-                color: white;
-            }
-            10% {
-                color: white;
+                left: 0;
             }
             100% {
-                color: #000;
-                // opacity: 1;
+                left: 400px;  
             }
         }
     }
