@@ -36,9 +36,8 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 100px auto;
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  margin-top: 100px;
 }
 
 .container .name {
