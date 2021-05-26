@@ -1,0 +1,148 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 100px auto;
+    width: 500px;
+    height: 500px;
+
+    //! start text
+    .name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 320px;
+        height: 50px;
+        .name_letter{
+            // opacity: 0;
+            font-size: 60px;
+            font-weight: 400;
+            color: white;
+
+            animation-name: letters_animation;
+            animation-duration: 3.2s;
+            animation-delay: 1.4s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes letters_animation {
+            0% {
+                color: white;
+            }
+            10% {
+                color: white;
+            }
+            100% {
+                color: #000;
+                // opacity: 1;
+            }
+        }
+    }
+    //! end text
+
+    //! start cloud 
+    .field {
+        margin: 0 auto;
+        position: relative;
+        right: 170px;
+        top: 50px;
+        width: 100px;
+        height: 150px;
+        &_cloud {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    
+        animation-name: field_animation;
+        animation-duration: 2.5s;
+        animation-delay: 1.3s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+        opacity: 0;
+        @keyframes field_animation {
+            0% {
+                opacity: 0;
+                right: 170px;
+            }
+            40% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                right: -150px;
+            }
+        }
+        &_drops {
+            position: absolute;
+            top: 39%;
+            width: 1.5px;
+            height: 13px;
+            border-radius: 0;
+            background-color: #000;
+            animation-duration: .4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        .dropA {
+            left: 10%;
+            animation-name: drops_animation;
+            animation-delay: .2s;
+            
+        }
+        .dropB {
+            left: 20%;
+            animation-name: drops_animation;
+            animation-delay: .5s;
+
+        }
+        .dropC {
+            left: 30%;
+            animation-name: drops_animation;
+            animation-delay: .4s;
+        }
+        .dropD {
+            left: 40%;
+            animation-name: drops_animation;
+            animation-delay: .6s;
+        }
+        .dropE {
+            left: 50%;
+            animation-name: drops_animation;
+            animation-delay: .3s;
+        }
+        .dropF {
+            left: 60%;
+            animation-name: drops_animation;
+            animation-delay: .2s;
+        }
+        .dropG {
+            left: 70%;
+            animation-name: drops_animation;
+            animation-delay: .4s;
+        }
+        .dropH {
+            left: 80%;
+            animation-name: drops_animation;
+            animation-delay: .3s;
+        }
+        @keyframes drops_animation {
+            0% {
+                top: 39%;
+            }
+            100% {
+                top: 90%;
+            }
+        }
+        
+    }
+}

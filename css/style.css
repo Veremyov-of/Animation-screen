@@ -1,0 +1,261 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #a2bae0;
+  font-family: 'KoHo', sans-serif;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 100px auto;
+  width: 500px;
+  height: 500px;
+}
+
+.container .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 320px;
+  height: 50px;
+}
+
+.container .name .name_letter {
+  font-size: 60px;
+  font-weight: 400;
+  color: white;
+  -webkit-animation-name: letters_animation;
+          animation-name: letters_animation;
+  -webkit-animation-duration: 3.2s;
+          animation-duration: 3.2s;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes letters_animation {
+  0% {
+    color: white;
+  }
+  10% {
+    color: white;
+  }
+  100% {
+    color: #000;
+  }
+}
+
+@keyframes letters_animation {
+  0% {
+    color: white;
+  }
+  10% {
+    color: white;
+  }
+  100% {
+    color: #000;
+  }
+}
+
+.container .field {
+  margin: 0 auto;
+  position: relative;
+  right: 170px;
+  top: 50px;
+  width: 100px;
+  height: 150px;
+  -webkit-animation-name: field_animation;
+          animation-name: field_animation;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  opacity: 0;
+}
+
+.container .field_cloud {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.container .field_cloud img {
+  width: 100px;
+  height: 100px;
+}
+
+@-webkit-keyframes field_animation {
+  0% {
+    opacity: 0;
+    right: 170px;
+  }
+  40% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    right: -150px;
+  }
+}
+
+@keyframes field_animation {
+  0% {
+    opacity: 0;
+    right: 170px;
+  }
+  40% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    right: -150px;
+  }
+}
+
+.container .field_drops {
+  position: absolute;
+  top: 39%;
+  width: 1.5px;
+  height: 13px;
+  border-radius: 0;
+  background-color: #000;
+  -webkit-animation-duration: .4s;
+          animation-duration: .4s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.container .field .dropA {
+  left: 10%;
+  -webkit-animation-name: drops_animation;
+          animation-name: drops_animation;
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+}
+
+.container .field .dropB {
+  left: 20%;
+  -webkit-animation-name: drops_animation;
+          animation-name: drops_animation;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
+.container .field .dropC {
+  left: 30%;
+  -webkit-animation-name: drops_animation;
+          animation-name: drops_animation;
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+
+.container .field .dropD {
+  left: 40%;
+  -webkit-animation-name: drops_animation;
+          animation-name: drops_animation;
+  -webkit-animation-delay: .6s;
+          animation-delay: .6s;
+}
+
+.container .field .dropE {
+  left: 50%;
+  -webkit-animation-name: drops_animation;
+          animation-name: drops_animation;
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+}
+
+.container .field .dropF {
+  left: 60%;
+  -webkit-animation-name: drops_animation;
+          animation-name: drops_animation;
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+}
+
+.container .field .dropG {
+  left: 70%;
+  -webkit-animation-name: drops_animation;
+          animation-name: drops_animation;
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+
+.container .field .dropH {
+  left: 80%;
+  -webkit-animation-name: drops_animation;
+          animation-name: drops_animation;
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+}
+
+@-webkit-keyframes drops_animation {
+  0% {
+    top: 39%;
+  }
+  100% {
+    top: 90%;
+  }
+}
+
+@keyframes drops_animation {
+  0% {
+    top: 39%;
+  }
+  100% {
+    top: 90%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
